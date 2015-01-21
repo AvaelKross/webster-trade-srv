@@ -14,27 +14,27 @@ $(document).ready(function() {
   // $("#phone1").mask(phonemask);
   // $("#phone2").mask(phonemask);
 
-  function send_data(form){
-    data = $(form).serializeArray();
+  // function send_data(form){
+  //   data = $(form).serializeArray();
     
-    // if ($(name).val().length==0) { alert("Пожалуйста, введите своё имя"); return;}
-    // if ($(phone).val().length==0) { alert("Пожалуйста, введите свой номер телефона"); return;}
-    // if ($(email).val().length==0) { alert("Пожалуйста, введите свой адрес электронной почты"); return;}
-    // if (!validateEmail($(email).val())) { alert("Пожалуйста, введите корректный адрес электронной почты"); return;}
+  //   // if ($(name).val().length==0) { alert("Пожалуйста, введите своё имя"); return;}
+  //   // if ($(phone).val().length==0) { alert("Пожалуйста, введите свой номер телефона"); return;}
+  //   // if ($(email).val().length==0) { alert("Пожалуйста, введите свой адрес электронной почты"); return;}
+  //   // if (!validateEmail($(email).val())) { alert("Пожалуйста, введите корректный адрес электронной почты"); return;}
     
-    jsonData = { name: $(data)[0].value, email: $(data)[2].value, phone: $(data)[1].value };
-    $.ajax({
-      type: "POST",
-      dataType: 'json',
-      url: "ajax-proxy",
-      data: jsonData
-    })
-    .done(function( msg ) {
-      console.log(msg);
-    });
-  }
+  //   jsonData = { name: $(data)[0].value, email: $(data)[2].value, phone: $(data)[1].value };
+  //   $.ajax({
+  //     type: "POST",
+  //     dataType: 'json',
+  //     url: "ajax-proxy",
+  //     data: jsonData
+  //   })
+  //   .done(function( msg ) {
+  //     console.log(msg);
+  //   });
+  // }
   
-  $("form").on('submit', function(){
-    send_data(this);
-  });
+  // $("form").on('submit', function(){
+  //   send_data(this);
+  // });
 });
